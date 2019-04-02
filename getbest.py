@@ -9,9 +9,9 @@ def getCols(f):
     headings = f.readline().strip().split(",")
     i=1
     for head in headings:
-        if head == "Student Number": num_col=head
-        elif head == "Mark" : mark_col = head
-    print(num_col, mark_col)
+        if head == "Student Number": num_col=i
+        elif head == "Mark" : mark_col =i
+        i = i+1
     return (num_col, mark_col)
 
 def findTop(f,num_col, mark_col):
