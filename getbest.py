@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 #edited
 import sys
+import os
 
 
 def getCols(f):
@@ -24,7 +25,7 @@ def findTop(f,num_col, mark_col):
     return best_idx, best
 
 
-f = open(sys.argv[1])
+f = open(os.path.join(os.path.dirname(__file__), "bestdat0.csv))
 num_col, mark_col = getCols(f)
 best_idx, best = findTop(f,num_col,mark_col)
 print("The top student was student %s with %d"%(best_idx,best))
