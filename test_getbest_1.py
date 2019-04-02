@@ -1,12 +1,12 @@
 import unittest
 import getbest
-import sys
+import os
 
-
+file_path = os.path.dirname(__file__)
 
 class Test(unittest.TestCase):
     def setup(self):
-        self.test_data =open(sys.argv[1])
+        self.test_data =os.path.join(file_path, "bestdat0.csv")
 
     def test(self):
         num_col,mark_col = getbest.getCols(self.test_data)
