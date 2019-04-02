@@ -11,7 +11,7 @@ class Test(unittest.TestCase):
     def test(self):
         f = self.test_data
         num_col,mark_col = getbest.getCols(self.test_data)
-        best_idx, best = findTop(,num_col,mark_col)
+        best_idx, best = findTop(f,num_col,mark_col)
         self.assertEqual(best, 90)
 
 
