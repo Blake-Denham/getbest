@@ -19,6 +19,7 @@ def findTop(f,num_col, mark_col):
     best = best_idx =  0
     for line in f:
         data = line.strip().split(",")[1:] 
+        print(data)
         mark = int(data[mark_col])
         if mark > best:
             best=mark
