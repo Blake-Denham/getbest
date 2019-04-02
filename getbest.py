@@ -18,9 +18,9 @@ def findTop(f,num_col, mark_col):
     """ finds the top student in the class """
     best = best_idx =  0
     for line in f:
-        data = line.strip().split(",")[1:] 
+        data = line.strip().split(",")
         print(data)
-        mark = int(data[mark_col])
+        mark = 50
         if mark > best:
             best=mark
     return best_idx, best
