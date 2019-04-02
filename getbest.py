@@ -4,16 +4,17 @@ import sys
 
 
 def getCols(f):
-    ''' Finds which columns the marks and student number is in '''
+    """ Finds which columns the marks and student number is in """
     headings = f.readline().strip().split(",")
     i=1
     for head in headings:
-        if head == "Student Number": num_col=i
-        elif head == "Mark" : mark_col = i
+        if head == "Student Number": num_col=head
+        elif head == "Mark" : mark_col = head
+    print(num_col, mark_col)
     return (num_col, mark_col)
 
 def findTop(f,num_col, mark_col):
-    ''' finds the top student in the class '''
+    """ finds the top student in the class """
     best = best_idx =  0
     for line in f:
         data = line.strip().split(",")
