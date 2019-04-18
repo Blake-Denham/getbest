@@ -34,7 +34,7 @@ def findTop(f, num_col, mark_col, headings_removed=True):
     return best_idx, best
 
 
-# put in main so testing doesn't do this (only runs if the file is run not imported)
+# put in main so the testing scripts doesn't run this (only runs if the file is run and not imported)
 if __name__ == '__main__':
     f = open(os.path.join('..', 'data', "bestdat0.csv"))
     print(f)
